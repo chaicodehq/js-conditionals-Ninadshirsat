@@ -27,4 +27,22 @@
  */
 export function calculateTax(income) {
   // Your code here
+  let totalTax = 0;
+  let taxOnLowerBrackets;
+  if(income <= 0) return 0;
+  if (income <= 10_000){
+    return totalTax;
+  } else if(income > 10_000 && income <= 30_000) {
+    taxOnLowerBrackets = income - 10_000;
+    totalTax = taxOnLowerBrackets * 0.10;
+    return totalTax;
+  } else if (income > 30_000 && income <= 70_000) {
+    taxOnLowerBrackets = (income - 30_000);
+    totalTax = (taxOnLowerBrackets * 0.20) + 2_000;
+    return totalTax;
+  } else if (income > 70_000){
+    taxOnLowerBrackets = (income - 70_000);
+    totalTax = (taxOnLowerBrackets * 0.30) + 10_000
+    return totalTax;
+  }
 }

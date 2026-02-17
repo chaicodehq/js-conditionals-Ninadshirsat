@@ -26,4 +26,50 @@
  */
 export function calculateGrade(score, hasExtraCredit) {
   // Your code here
+  if(score < 0 || score > 100){
+    return "INVALID"
+  } 
+    if(hasExtraCredit){
+      score = Math.min(score + 5, 100);
+    }
+
+    if(score >=90) return "A";
+    else if(score >=80) return "B";
+    else if(score >=70) return "C";
+    else if(score >=60) return "D";
+    else return "F";
+
+    
+  // if(score < 0 || score > 100){
+  //   return "INVALID"
+  // } else if (score >= 90 && score <=100){
+  //   if(hasExtraCredit && score <= 95){
+  //     score = score + 5;
+  //   }
+  //   return "A";
+  // } else if (score >=80 && score <=89){
+  //   if(hasExtraCredit){
+  //     score = score + 5;
+  //   }
+  //   if(score >= 90)return "A";
+  //   else return "B";
+  // } else if (score >= 70 && score <= 79){
+  //   if(hasExtraCredit){
+  //     score = score + 5;
+  //   }
+  //   if(score >=80 ) return "B";
+  //   else return "C"; 
+  // } else if (score >= 60 && score <= 69){
+  //   if(hasExtraCredit){
+  //     score = score + 5;
+  //   }
+  //   if(score >= 70) return "C";
+  //   else return "D";
+  // } else if (score <= 59){
+  //   if(hasExtraCredit){
+  //     score = score + 5;
+  //   }
+  //   if(score >= 60) return "D";
+  //   else return "F"
+  // }
 }

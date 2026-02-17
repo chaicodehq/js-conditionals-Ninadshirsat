@@ -23,4 +23,13 @@
  */
 export function getTrafficAction(color) {
   // Your code here
+  switch(color.toLowerCase()){
+    case "green": return "GO";
+    case "yellow": return "SLOW DOWN";
+    case "red": return "STOP";
+    case "flashing red": return "STOP AND PROCEED WITH CAUTION";
+    default: return "INVALID SIGNAL";
+  }
 }
+
+//using .toLowerCase() allows us to convert the input string to lowercase, making the function case-insensitive. This way, it will correctly handle inputs like "GREEN", "Green", and "green" and return the appropriate action.
